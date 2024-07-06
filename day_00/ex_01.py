@@ -8,10 +8,8 @@ right = 1
 step = 100
 h = (right - left) / step
 
-integral = 0
+s = 0
 for i in range(step):
-    integral += f(left + i*h)
+    s += h*f(left + i*h)
 
-integral *= h
-
-print("Результат интегрирования методом левых прямоугольников:", integral)
+print("Результат интегрирования методом левых прямоугольников:", s)
