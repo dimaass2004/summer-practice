@@ -13,3 +13,4 @@ for i in range(step):
     s += h*f(left + (i+0.5)*h)
 
 print("Результат интегрирования методом центральных прямоугольников:", s)
+print(abs(s-(math.exp(1)-1)))
