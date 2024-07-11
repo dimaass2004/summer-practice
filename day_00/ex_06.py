@@ -23,11 +23,18 @@ def trapezoid_method(left, right, step):
     for i in range(step):
         s += h * (f(left + i * h) + f(left + (i + 1) * h)) * 0.5
     return s
+def simpson_method(left, right, step):
+    h = (right - left) / (step-1)
+    s = 0
+    for i in range(step-1):
+        s += h*(f(left+i*h)+ 4*f(left+h*(i+1/2))+f(left+(i+1)*h))/6
+    return s
 
 methods = {
-    'Left Rectangle': left_rectangle_method,
-    'Central Rectangle': central_rectangle_method,
-    'Trapezoid': trapezoid_method
+    'Метод левых прямугольников': left_rectangle_method,
+    'Метод центральных прямоугольников': central_rectangle_method,
+    'Метод трапеций': trapezoid_method,
+    'Метод Симпсона': simpson_method
 }
 
 left = 0
