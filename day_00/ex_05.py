@@ -19,7 +19,7 @@ step = 10
 steps = []
 errors = []
 
-for _ in range(8):
+for _ in range(7):
     integral_value = s(left, right, step)
     error = abs(integral_value - (math.exp(1) - 1))
     steps.append(step)
@@ -35,6 +35,6 @@ plt.xscale('log')
 plt.yscale('log')
 plt.xlabel('Количесвто разбиений')
 plt.ylabel('Ошибка')
-plt.title('Зависисмоть ошибки от количества разиений в трехузловом методе гауса ')
+plt.title('Зависисмоть ошибки от количества разиений в методе Симпсона')
 plt.grid(True)
 plt.show()
